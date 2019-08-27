@@ -2,7 +2,7 @@
 ejemplo pagina
 
 <p style="color: green">hola</p>
-<p id="mensaje"></p>
+<p id="receiver"></p>
 <button id="send">Enviar MSG a Principal</button>
 
 <script type="text/javascript">
