@@ -1,3 +1,13 @@
 # ejemplo-pagina
 ejemplo pagina
-<p style="color:green">hola</p>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p style="color: green">hola</p>
+</body>
+</html>
