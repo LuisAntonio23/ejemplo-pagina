@@ -23,7 +23,7 @@ var messageButton = document.getElementById('send');
 
 bindEvent(messageButton, 'click', function (e) {
 	var random = Math.random();
-	sendMessage('segundooooooooooooooo');
+	sendMessage(document);
 });
 </script>
 
