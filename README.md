@@ -22,6 +22,5 @@ var sendMessage = function (msg) {
 };
 
 window.addEventListener('message',reciveMessage);
-});
 </script>
 
