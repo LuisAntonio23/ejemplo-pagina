@@ -8,22 +8,20 @@ ejemplo pagina
 
 <script type="text/javascript">
 document.getElementsByTagName('p')[0].style.color = 'red';
-function bindEvent(element, eventName, eventHandler) {
-       	if (element.addEventListener) {
-               	element.addEventListener(eventName, eventHandler, false);
-      	} else if (element.attachEvent) {
-               	element.attachEvent('on' + eventName, eventHandler);
-       	}
+
+
+
+function reciveMessage(e){
+	if(e.data == 'getUrlLocation'){
+		sendMessage('' + document.location);
+	}
 }
-	
+
 var sendMessage = function (msg) {
 	window.parent.postMessage(msg, '*');
 };
 
-bindEvent(window, 'message', function (e) {
-	if(e.data == 'getUrlLocation'){
-		sendMessage('' + document.location);
-	}
+window.addEventListener('message',reciveMessage);
 });
 </script>
 
