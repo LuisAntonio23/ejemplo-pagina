@@ -7,20 +7,23 @@ ejemplo pagina
 <a href=" https://luisantonio23.github.io/prueba-pag-2/"><button id="next">siguiente pag</button></a>
 
 <script type="text/javascript">
-document.getElementsByTagName('p')[0].style.color = 'red';
-
-
-
-function reciveMessage(e){
-	if(e.data == 'getUrlLocation'){
-		sendMessage('' + document.location);
+window.onload = function() {
+	function receiveMessage(e) {
+		
+		var styleSheet = document.createElement('style')
+		styleSheet.innerHTML = e.data[0];
+		document.body.appendChild(styleSheet);
+		
+		if(e.data[1] == "getUrlLocation"){
+			sendMessage('' + document.location);	
+		}	
 	}
+	
+	var sendMessage = function(msg){
+		window.parent.postMessage(msg, '*');
+	};
+	
+	window.addEventListener('message', receiveMessage);
 }
-
-var sendMessage = function (msg) {
-	window.parent.postMessage(msg, '*');
-};
-
-window.addEventListener('message',reciveMessage);
 </script>
 
