@@ -7,6 +7,7 @@ ejemplo pagina
 <a href=" https://luisantonio23.github.io/prueba-pag-2/"><button id="next">siguiente pag</button></a>
 
 <script type="text/javascript">
+window.onload = function() {
 	function receiveMessage(e) {
 		
 		var styleSheet = document.createElement('style')
@@ -23,5 +24,5 @@ ejemplo pagina
 	};
 	
 	window.addEventListener('message', receiveMessage);
+}
 </script>
-
